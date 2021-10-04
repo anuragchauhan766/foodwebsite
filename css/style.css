@@ -13,10 +13,10 @@ html{
     height: 80px;
     display: flex;
     align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
-    
+    z-index: 1;
 }
 #navbar::before{
     content: "";
@@ -73,7 +73,7 @@ html{
     align-items: center;
     flex-direction: column;
     height: calc(50vh - 80px);
-
+    margin-top: 80px;
 }
 #home::before{
     content: "";

@@ -20,6 +20,7 @@
 /* homesection */
 #home{
     height: calc(55vh - 100px);
+    margin-top: 100px;
 }
 #home::before{
     height: 55vh;
