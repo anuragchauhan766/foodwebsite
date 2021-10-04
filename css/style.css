@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation */
+#navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    
+}
+#navbar::before{
+    content: "";
+    background: black;
+    opacity: 0.4;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0%;
+}
+/* Navigation: logo and image */
+#navbar .logo{
+    margin: 0 30px;
+}
+#navbar .logo img{
+    height: 65px;
+    background: white;
+    border-radius: 50%;
+    
+
+}
+/* navigation bar : list style */
+#navbar ul{
+    display: flex;
+    align-items: center;
+
+}
+#navbar ul li{
+    list-style: none;
+
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 4px 22px;
+    border-radius: 20px;
+    display: block;
+    transition: all 0.4s ease;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.2rem;
+}
+
+
+#navbar ul li a:hover{
+    background:white;
+    color: black;
+}
+/* Home  */
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(50vh - 80px);
+
+}
+#home::before{
+    content: "";
+    background: url(../img/bg/bg.jpg) no-repeat center center/cover;
+    filter: brightness(50%);
+    opacity: 0.8;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0%;
+
+}
+#home p{
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    color: white;
+    text-align: center;
+    margin: 0px 20px;
+}
+#home h1{
+    margin-bottom: 20px;
+    color: white;
+}
+/* services section */
+#services {
+    margin: 30px 0;
+}
+#services h1{
+    margin-bottom: 35px;
+}
+#services .servicesbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#services .servicesbox .servicesitems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid brown;
+    padding: 36px;
+    margin: 3px 20px;
+    border-radius: 28px;
+    background: #f9f6f6;
+    transition: all 0.4s ease;
+
+}
+#services .servicesbox .servicesitems:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.01);
+}
+#services .servicesbox .servicesitems p{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.servicesitems img{
+    height: 160px;
+    
+}
+/* our clients */
+#ourclients{
+    margin: 30px 0;
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#ourclients::before{
+    content: "";
+    background: url(../img/bg/bg2.jpg) no-repeat center center/cover;
+    filter: brightness(70%);
+    opacity: 0.8;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: 0%;
+
+}
+#ourclients h1{
+    margin-bottom: 80px;
+}
+#ourclients .client{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#ourclients .client .clients-logo{
+    margin: 12px;
+}
+#ourclients .client .clients-logo img{
+    height: 160px;
+}
+/* contactus */
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    height: 75vh;
+}
+#contactus::before{
+    content: "";
+    background: url(../img/bg/contactus.jpg) no-repeat center center/cover;
+    filter: brightness(70%);
+    opacity: 0.8;
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0%;
+}
+#contactus h1{
+    margin: 15px 0;
+   
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 4px;
+    margin: 15px;
+}
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+    color: #666;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+/* footer */
+footer{
+    background: black;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+/* utility class */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.8rem;
+}
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.8rem;
+}
+.center{
+    text-align: center;
+}
+.btn{
+    font-size: 1.3rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    background: brown;
+    border: 2px solid white;
+    color: white;
+    border-radius: 12px;
+    margin: 12px 0;
+    transition: all 0.4s ease;
+}
+.btn:hover{
+    background: rgb(180, 67, 67);
+    transform: scale(1.1);
+}
